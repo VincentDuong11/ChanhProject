@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Author Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Library UI</h1>
+    <p>Below is the list of vailable authors.</p>
+
+    <button type="button" onclick="location.href='@Url.Action("Add","Author")'">Add</button>
+    <table style="width:100%">
+        <tr>
+            @foreach (var header in  @ChanhProject.Models.AuthorModel.Headers())
+            {
+                <th>@header</th>
+            }
+            <td>Edit</td>
+        </tr>
+        @foreach (var author in @ChanhProject.Models.AuthorModel.List())
+        {
+            <tr>
+                <td>@author.Id</td>
+                <td>@author.Name</td>
+                <td>
+                    <a href='@Url.Action("Edit","Author", new { id = author.Id })'>Edit</a>
+                    <a href='@Url.Action("Delete","Author", new { id = author.Id })' onclick="$.post(this.href);">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

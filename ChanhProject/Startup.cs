@@ -36,7 +36,7 @@ namespace ChanhProject
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Book/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -51,7 +51,7 @@ namespace ChanhProject
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Book}/{action=Index}/{id?}");
             });
 
             SqliteConnection conn = Database.GetConnection();
@@ -60,15 +60,10 @@ namespace ChanhProject
             {
                 var createTableCmd = conn.CreateCommand();
                 createTableCmd.Transaction = transaction;
-                createTableCmd.CommandText =  "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, title TEXT NOT NULL);" +
-                    "CREATE TABLE IF NOT EXISTS authors (id INTEGER PRIMARY KEY, title TEXT NOT NULL) ;" +
-                    "CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY, event_type INTEGER NOT NULL, user_id INTEGER NOT NULL , " +
-                        "book_id INTEGER NOT NULL, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL );" +
-                    "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT NOT NULL);" +
-                    "" +
-                    "" +
-                    "" +
-                    "INSERT OR REPLACE INTO books (title) VALUES ('thang')";
+                createTableCmd.CommandText = "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, title TEXT NOT NULL, quantity INTEGER, UNIQUE(title));" +
+                    "CREATE TABLE IF NOT EXISTS authors (id INTEGER PRIMARY KEY, name TEXT NOT NULL, UNIQUE(name)) ;" +
+                    "CREATE TABLE IF NOT EXISTS book_author (book_id INTEGER, author_id INTEGER, PRIMARY KEY (book_id, author_id), FOREIGN KEY(author_id) REFERENCES authors(id), FOREIGN KEY(book_id) REFERENCES books(id)) ;" +
+                    "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT NOT NULL);";
                 createTableCmd.ExecuteNonQuery();
                 transaction.Commit();
             }

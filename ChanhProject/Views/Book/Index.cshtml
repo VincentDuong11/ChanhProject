@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Library UI</h1>
+    <p>Below is the list of available books.</p>
+
+    <button type="button" onclick="location.href='@Url.Action("Add","Book")'">Add</button>
+    <table style="width:100%">
+        <tr>
+            @foreach (var header in  @ChanhProject.Models.BookModel.Headers())
+            {
+                <th>@header</th>
+            }
+            <td>Action</td>
+        </tr>
+        @foreach (var book in @ChanhProject.Models.BookModel.List())
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.Quantity</td>
+                <td>
+                    @foreach (var author in book.Authors)
+                    {
+                        <p>@author.Name ,</p>
+                    }
+                </td>
+                <td>
+                    <a href='@Url.Action("Edit","Book", new { id = @book.Id })'>Edit</a>
+                    <a href='@Url.Action("Delete","Book", new { id = @book.Id })' onclick="$.post(this.href);">Delete</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
