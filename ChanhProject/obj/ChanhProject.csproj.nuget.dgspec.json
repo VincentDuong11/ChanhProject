@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj": {}
+    "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj": {
+    "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj",
+        "projectUniqueName": "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj",
         "projectName": "ChanhProject",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\ChanhProject\\ChanhProject\\obj\\",
+        "projectPath": "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj",
+        "packagesPath": "C:\\Users\\Chanh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +37,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Data.Sqlite": {
               "target": "Package",
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "qhYNzPgry878LhtccjXl2WXp9uusjSMQFMfk3z3kJqp3Gn1NJeMcqwiOPAcWejXFXo6jX//YRc0/vJDWrNy8Lw==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Chanh\\source\\repos\\ChanhProject\\ChanhProject\\ChanhProject.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.Data.Sqlite. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.Data.Sqlite",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.VisualStudio.Web.CodeGeneration.Design. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.VisualStudio.Web.CodeGeneration.Design",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

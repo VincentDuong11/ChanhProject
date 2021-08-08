@@ -129,3 +129,5 @@ C:\Users\DELL\source\repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\Raz
 C:\Users\DELL\source\repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\Razor\Views\Author\Add.cshtml.g.cs
 C:\Users\DELL\source\repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\Razor\Views\Author\Edit.cshtml.g.cs
 C:\Users\DELL\source\repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\ChanhProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Chanh\Source\Repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\ChanhProject.dll
+C:\Users\Chanh\Source\Repos\ChanhProject\ChanhProject\obj\Debug\netcoreapp3.1\ChanhProject.pdb
