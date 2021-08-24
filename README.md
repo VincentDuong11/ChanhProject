@@ -1,4 +1,4 @@
-# Overview
+# Sitecore project
 
 Sitecore interview project. 
 
